@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Nav Style Start */
+  
+  header {
+    background:lightgoldenrodyellow;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .toggler {
+    display: none;
+  }
+  
+  .logo {
+    font-family: 'Blaka Ink', cursive;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+    display: flex;
+    height: 80px;
+    width: 80px;
+  }
+  
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 16px;
+    background: #585858;
+    left: -100%;
+    transition: all .5s;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-bottom: 16px;
+    margin-left: 16px;
+  }
+  
+  nav a {
+    font-family: 'Arimo', sans-serif;
+    color:#6F3E01;
+    text-decoration: none;
+    font-size: 20px;
+    right: -100%;
+    text-shadow: 2px 2px 4px rgba(31, 31, 31, 0.658);
+  }
+  
+  nav a:hover {
+    color: rgb(245, 98, 36);
+    transition: ease-in .1s;
+  }
+  
+  .toggler:checked ~ nav ul {
+    left: 0;
+  }
+  
+  .burger {
+    position: absolute;
+    font-size: 35px;
+    color: black;
+    text-shadow: 2px 2px 4px rgb(31, 31, 31);
+    top: 0;
+    right: 0;
+    margin-right: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggler:checked ~ nav a {
+    opacity: 1;
+  }
+  
+  
+  /* Desktop Screen Format */
+  
+  @media screen and (min-width: 800px) {
+    .burger {
+      display: none;
+    }
+  
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto minmax(700px, 3fr);
+    }
+  
+    nav {
+      
+      display: flex;
+      grid-column: 3/4;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    nav ul {
+      all: unset;
+      list-style: none;
+      display: flex;
+      
+    }
+  
+    nav li {
+      margin-bottom: 0;
+      margin-right: 16px;
+      
+    }
+  
+    nav a {
+      opacity: 1;
+    }
+  
+  }
