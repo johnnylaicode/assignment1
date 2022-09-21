@@ -2,6 +2,6 @@
 
 Group member:
 
-Johnny Lai - johnnylaicode
+Fatima Javid - fatimajavid
 
-[Link to website](https://johnnylaicode.github.io/assignment1/)
+[Link to website](https://https://github.com/Fatimajavid/Assignment-1-Zoo)
